@@ -729,5 +729,11 @@ const first=enter($('#'+ci),150);first.finished.then(()=>first.cancel());
   {'@type':'Store','@id':u+'#store','url':u,'name':'Sholo Ana','alternateName':['Sholoana','ষোলো আনা'],'slogan':'মমতায়, ভরসায় (Momotay, Vorosay)','description':'Premium honey, ghee, nuts, dried fruits, seeds, dates, oils and herbs in Bangladesh.','areaServed':{'@type':'Country','name':'Bangladesh'},'contactPoint':{'@type':'ContactPoint','contactType':'customer service','telephone':'+8801964693950','availableLanguage':['en','bn']}}]};
  const s=document.createElement('script');s.type='application/ld+json';s.textContent=JSON.stringify(ld);h.appendChild(s)})();
 </script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
+</script>
 </body>
 </html>
